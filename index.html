@@ -3,126 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supermercados Luisiño</title>
+
+    <title>Supermercados Luisiño | Empresa</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* HERO estilo empresa real */
+        .hero {
+            background: url("https://images.unsplash.com/photo-1542838132-92c53300491e") center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 50px 0 25px;
+            font-weight: bold;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        .badge-custom {
+            background: #198754;
+        }
+    </style>
+
 </head>
+
 <body>
 
-    <header>
-        <h1>SUPERMERCADOS LUISIÑO</h1>
-        <h2>Plataforma para administrar productos y facturación</h2>
-        <h3>Desarrollado por Luis Paz</h3>
-    </header>
+<!-- NAVBAR PRO -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Luisiño Market</a>
 
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#quienes-somos">Quiénes Somos</a></li>
-            <li><a href="#productos">Servicios o Productos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <main>
-
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <p>
-                Bienvenidos a Supermercados Luisiño, una plataforma web creada para mejorar la administración
-                de productos, ventas y facturación dentro de un supermercado. Este proyecto busca facilitar el
-                control de inventario y brindar una mejor atención a los clientes.
-            </p>
-        </section>
-
-        <section id="quienes-somos">
-            <h2>Quiénes Somos</h2>
-
-            <article>
-                <p>
-                    Supermercados Luisiño es un proyecto web institucional orientado a la administración de un
-                    supermercado moderno, organizado y eficiente. La finalidad principal de esta plataforma es
-                    presentar información importante sobre el negocio, sus productos, servicios y medios de
-                    contacto. Además, busca mostrar una imagen profesional del emprendimiento mediante una página
-                    web sencilla, clara y fácil de navegar. Este sitio permite que los clientes conozcan mejor el
-                    supermercado, sus horarios, promociones y productos disponibles. También representa una base
-                    inicial para desarrollar en el futuro un sistema más completo de control de inventario,
-                    facturación y atención al cliente. A través del uso de HTML5 y etiquetas semánticas, la página
-                    se organiza correctamente para facilitar su comprensión, mantenimiento y crecimiento dentro del
-                    área de desarrollo de aplicaciones web.
-                </p>
-
-                <img 
-                    src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=80" 
-                    alt="Imagen de supermercado con productos" 
-                    width="400">
-            </article>
-        </section>
-
-        <section id="productos">
-            <h2>Servicios o Productos</h2>
-            <p>En Supermercados Luisiño ofrecemos los siguientes productos y servicios:</p>
-
-            <ul>
-                <li>Venta de productos de primera necesidad</li>
-                <li>Productos de limpieza para el hogar</li>
-                <li>Bebidas, snacks y alimentos empaquetados</li>
-                <li>Frutas, verduras y productos frescos</li>
-                <li>Facturación de compras</li>
-                <li>Control y administración de inventario</li>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#empresa">Empresa</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
             </ul>
-        </section>
+        </div>
+    </div>
+</nav>
 
-        <section id="video">
-            <h2>Video relacionado</h2>
-            <p>El siguiente video muestra información relacionada con la administración y atención en supermercados.</p>
+<!-- HERO -->
+<section id="inicio" class="hero">
+    <div class="hero-content">
+        <h1 class="display-4 fw-bold">Supermercados Luisiño</h1>
+        <p class="lead">Calidad, confianza y precios bajos todos los días</p>
+        <a href="#servicios" class="btn btn-success btn-lg">Explorar productos</a>
+    </div>
+</section>
 
-            <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/ysz5S6PUM-U" 
-                title="Video relacionado con supermercado" 
-                frameborder="0" 
-                allowfullscreen>
-            </iframe>
-        </section>
+<!-- EMPRESA -->
+<section id="empresa" class="container">
+    <h2 class="section-title">Nuestra Empresa</h2>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
+    <div class="row align-items-center">
 
-            <p><strong>Correo electrónico:</strong> 
-                <a href="mailto:supermercadosluisino@gmail.com">supermercadosluisino@gmail.com</a>
-            </p>
-
-            <p><strong>Teléfono:</strong> 
-                <a href="tel:+593999999999">099 999 9999</a>
-            </p>
-
-            <p><strong>Dirección:</strong> Ecuador</p>
-
-            <p><strong>Redes sociales:</strong></p>
-            <ul>
-                <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-                <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-                <li><a href="https://www.tiktok.com" target="_blank">TikTok</a></li>
-            </ul>
-        </section>
-
-        <aside>
-            <h2>Información adicional</h2>
+        <div class="col-md-6">
             <p>
-                Promoción especial: descuentos en productos seleccionados durante la semana.
+                Supermercados Luisiño es una empresa dedicada a la comercialización de productos de consumo diario,
+                enfocada en brindar calidad, buen servicio y precios competitivos. Nuestro objetivo es satisfacer las
+                necesidades de nuestros clientes mediante una atención eficiente, moderna y accesible.
             </p>
-            <p>
-                Horario de atención: lunes a domingo de 08h00 a 21h00.
-            </p>
-        </aside>
 
-    </main>
+            <span class="badge badge-custom">Empresa confiable</span>
+            <span class="badge bg-primary">Atención 24/7</span>
+        </div>
 
-    <footer>
-        <p>Estudiante: Luis Paz</p>
-        <p>Asignatura: Desarrollo de Aplicaciones Web</p>
-        <p>Año: 2026</p>
-    </footer>
+        <div class="col-md-6">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e"
+                 class="img-fluid rounded shadow">
+        </div>
+
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="container">
+    <h2 class="section-title">Nuestros Servicios</h2>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-3">
+                <h5>Venta de productos</h5>
+                <p>Alimentos, limpieza y hogar.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-3">
+                <h5>Facturación digital</h5>
+                <p>Sistema rápido y moderno de pagos.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-3">
+                <h5>Delivery</h5>
+                <p>Entrega rápida a domicilio.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-3">
+                <h5>Control de inventario</h5>
+                <p>Gestión eficiente de productos.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-3">
+                <h5>Promociones</h5>
+                <p>Ofertas semanales exclusivas.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-3">
+                <h5>Atención al cliente</h5>
+                <p>Soporte rápido y personalizado.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- VIDEO -->
+<section id="video" class="container">
+    <h2 class="section-title">Video Institucional</h2>
+
+    <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" allowfullscreen></iframe>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="container">
+    <h2 class="section-title">Contacto</h2>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <form class="p-3 bg-white shadow rounded">
+                <input class="form-control mb-2" placeholder="Nombre">
+                <input class="form-control mb-2" placeholder="Correo">
+                <input class="form-control mb-2" placeholder="Asunto">
+                <textarea class="form-control mb-2" rows="4" placeholder="Mensaje"></textarea>
+                <button class="btn btn-success w-100">Enviar mensaje</button>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            <div class="p-3">
+                <p><strong>Correo:</strong> supermercadosluisino@gmail.com</p>
+                <p><strong>Teléfono:</strong> 099 999 9999</p>
+                <p><strong>Ubicación:</strong> Ecuador</p>
+
+                <a class="btn btn-dark m-1">Facebook</a>
+                <a class="btn btn-dark m-1">Instagram</a>
+                <a class="btn btn-dark m-1">TikTok</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Supermercados Luisiño - Todos los derechos reservados</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
